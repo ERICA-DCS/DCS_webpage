@@ -1,0 +1,8 @@
+.content{
+    background-color: gray;
+    height: 800px;
+    widows: 100%;
+}
+.content:nth-child(2n){
+    background-color: white;
+}
