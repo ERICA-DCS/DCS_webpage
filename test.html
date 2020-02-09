@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Pure CSS Percentage Circle Demo</title>
+		<meta name="description" content="A demo of Percentage Circles. No graphics, no JavaScript - pure CSS percentage circle tutorial. Download HTML, CSS and SASS files." />
+    <meta name="author" content="Codeconvey" />
+    <style>
+      
+#svg circle {
+  /* stroke-dashoffset: 565.48; */
+  stroke-dashoffset: 0;
+  stroke-dasharray:565.48;
+  fill:transparent;
+  transition: stroke-dashoffset 1s linear;
+  stroke: #666;
+  stroke-width: 1em;
+  /* animation: test 1.3s ease-in-out forwards; */
+}
+@keyframes test {
+    to{
+        stroke-dashoffset: 155;
+    }
+}
+@keyframes test2 {
+    from{
+      stroke-dashoffset: 565.48;
+    }
+    to{
+        stroke-dashoffset: 170;
+    }
+}
+#svg{
+  transform: rotate(-90deg);
+}
+#svg #bar {
+  stroke: #FF9F1E;
+      stroke-dashoffset: 565.48;
+  animation: test2 1s 0.4s ease-in-out forwards;
+  stroke-width: 20;
+  /* transform: rotate(0deg); */
+}
+/* #cont {
+  display: block;
+  height: 200px;
+  width: 200px;
+  margin: 2em auto;
+  box-shadow: 0 0 1em black;
+  border-radius: 100%;
+  position: relative;
+} */
+/* #cont:after {
+  position: absolute;
+  display: block;
+  height: 160px;
+  width: 160px;
+  left: 50%;
+  top: 50%;
+  box-shadow: inset 0 0 1em black;
+  content: attr(data-pct)"%";
+  margin-top: -80px;
+  margin-left: -80px;
+  border-radius: 100%;
+  line-height: 160px;
+  font-size: 2em;
+  text-shadow: 0 0 0.5em black;
+} */
+
+/* Make things perty */
+html {  height: 100%;}
+body { font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;  background-color: #0d0d0d; color: #fff; height: 100%; padding-top: 2em; text-align: center;}
+    </style>
+</head>
+<body>	
+<svg id="svg" width="200" height="200">
+  <circle r="90" cx="100" cy="100" ></circle>
+  <circle id="bar" r="90" cx="100" cy="100" ></circle>
+</svg>
+</body>
+</html>
+
+<!-- 
+
+  stroke-dasharray = r * 2 * PI
+  per = ((100-per)/100)*stroke-dasharray
+
+
+  $('#percent').on('change', function(){
+  var val = parseInt($(this).val());
+  var $circle = $('#svg #bar');
+  
+  if (isNaN(val)) {
+   val = 100; 
+  }
+  else{
+    var r = $circle.attr('r');
+    var c = Math.PI*(r*2);
+   
+    if (val < 0) { val = 0;}
+    if (val > 100) { val = 100;}
+    
+    var pct = ((100-val)/100)*c;
+    
+    $circle.css({ strokeDashoffset: pct});
+    
+    $('#cont').attr('data-pct',val);
+  }
+}); -->

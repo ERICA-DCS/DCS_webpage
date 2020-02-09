@@ -3,30 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <title>소프트웨어학부 학생회</title>
+    <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/nav_bar.css">
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
 </head>
+
 <body>
-    <nav class="nav_bar">
-        <h1>메인로고</h1>
-        <div class="nav_content">
-            <h1>2020 학생회
-                <div class="sub_nav">
-                    <h2>학생회 소개</h2>
-                    <h2>회장단</h2>
-                    <h2>기획집행부</h2>
-                    <h2>재무부</h2>
-                    <h2>디자인부</h2>
-                    <h2>교육지원부</h2>
-                </div>
-            </h1>
-            <h1>결산안</h1>
-            <h1>공약이행율</h1>
-            <h1>HESH</h1>
-            <h1>공지사항</h1>
+    <header include-html="./html/nav_bar.html"></header>
+    <div class="content visual">
+        <div class="slider">
+            <div class="visual_item visual_1 show">
+    
+            </div>
+            <div class="visual_item visual_2">
+    
+            </div>
+            <div class="visual_item visual_3">
+    
+            </div>
         </div>
-    </nav>
-    <div class="content" style="padding-left: 50px; padding-top: 50px;">
+        <div class="bullet">
+            <ul>
+                <li>●</li>
+                <li>○</li>
+                <li>○</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="progress">
+        <h1>공약 이행률</h1>
+        <div class="progress_content">
+            <div class="progress_1 progress_block">
+                <h2>스룸 큐브 감지센서</h2>
+                <h3>24%</h3>
+                <svg class="progress_svg" width="250" height="250">
+                  <circle class="circle circle1" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle2 hide" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle3 hide" r="110" cx="125" cy="125" ></circle>
+                </svg>
+            </div>
+            <div class="progress_2 progress_block">
+                <h2>학생회 웹페이지</h2>
+                <h3>43%</h3>
+                <svg class="progress_svg" width="250" height="250">
+                  <circle class="circle circle1" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle2 hide" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle3 hide" r="110" cx="125" cy="125" ></circle>
+                </svg>
+            </div>
+            <div class="progress_3 progress_block">
+                <h2>결산안 공개</h2>
+                <h3>78%</h3>
+                <svg class="progress_svg" width="250" height="250">
+                  <circle class="circle circle1" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle2 hide" r="110" cx="125" cy="125" ></circle>
+                  <circle class="circle circle3 hide" r="110" cx="125" cy="125" ></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="calender">
+        <div class="calender_content">
+            <div class="current_calender hide">
+                <a href="#">
+                    <img class="calender_img" src="./src/img/soft_calender_02.jpeg" alt="">
+                </a>
+                <h1>2020년 2월</h1>
+            </div>
+            <div class="sub_calender">
+                <div class="calender_text hide">
+                    <h1>SOFT Calender</h1>
+                    <h2>월간 소식을 한눈에 전달해 드립니다.</h2>
+                </div>
+                <div class="sub_calender_imgset">
+                    <div class="sub_calender_img hide">
+                        <img class="calender_img" src="./src/img/soft_calender_01.jpeg" alt="">
+                        <h1>2020년 1월</h1>
+                    </div>
+                    <div class="sub_calender_img hide">
+                        <img class="calender_img" src="./src/img/soft_calender_01.jpeg" alt="">
+                        <h1>2020년 1월</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="multimedia">
+        <div class="galary">
+            <h1>SOFT galary</h1>
+            <div class="galary_content">
+                소프트 갤러리
+            </div>
+        </div>
+        <div class="youtube">
+            <h1>SOFT youtube</h1>
+            <div class="youtube_content">
+                유튜브 영상
+            </div>
+        </div>
+    </div>
+    <div class="notification">
+        <div class="smash">
+            <h1>스룸 & 큐브 바로가기 ></h1>
+        </div>
+        <div class="notice">
+            <h1>공지사항 바로가기 ></h1>
+        </div>
+    </div>
+    <!-- <div class="content" style="padding-left: 50px; padding-top: 50px;">
         <h1>메인</h1>
         <h3> - 소프트웨어 학부 소개 및 시설 소개</h3>
         <br>
@@ -50,9 +140,17 @@
 
         <h1>HESH</h1>
         <h2> - HESH 행사에 대한 소개와 참여 조사 등</h2>
+    </div> -->
+    <!-- <div class="content"></div> -->
+    <div class="assignment">
+        <img src="./src/img/assignment01.png" alt="assignment01">
+        <!-- <h1>ASSIGNMENT</h1> -->
     </div>
-    <div class="content"></div>
-    <div class="content"></div>
-    <div class="content"></div>
+    <footer>
+
+    </footer>
+    <script src="./js/includeHTML.js"></script>
+    <script src="./js/index_slider.js"></script>
+    <script src="./js/index_animation.js"></script>
 </body>
 </html>

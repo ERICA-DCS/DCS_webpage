@@ -1,0 +1,32 @@
+@font-face{
+    font-family: NS;
+    src: url("../src/font/NanumSquareRegular.ttf");
+}
+@font-face{
+    font-family: NSL;
+    src: url("../src/font/NanumSquareLight.ttf");
+}
+@font-face{
+    font-family: NSB;
+    src: url("../src/font/NanumSquareBold.ttf");
+}
+@font-face{
+    font-family: NSEB;
+    src: url("../src/font/NanumSquareExtraBold.ttf");
+}
+@font-face{
+    font-family: NSR;
+    src: url("../src/font/NanumSquareRoundR.ttf");
+}
+@font-face{
+    font-family: NSRL;
+    src: url("../src/font/NanumSquareRoundL.ttf");
+}
+@font-face{
+    font-family: NSRB;
+    src: url("../src/font/NanumSquareRoundB.ttf");
+}
+@font-face{
+    font-family: NSREB;
+    src: url("../src/font/NanumSquareRoundEB.ttf");
+}

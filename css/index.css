@@ -1,8 +1,428 @@
 .content{
-    background-color: gray;
     height: 800px;
     widows: 100%;
 }
-.content:nth-child(2n){
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+ul{
+    text-decoration: none;
+}
+li{
+    text-decoration: none;
+    list-style: none;
+}
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: "NSB";
+}
+.hide{
+    visibility: hidden;
+}
+
+
+
+/* =============== visual div =============== */
+
+.visual{
+    /* background: url("../src/img/visual_img01.jpg") center center no-repeat;
+    background-size: 2500px; */
+    /* background-color: #043988; */
+    /* overflow: hidden; */
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.visual .slider{
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+.slider .visual_item{
+    width: 100%;
+    height: 800px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    transform: translateX(100%);
+    transition: all 0.3s;
+}
+.slider .show{
+    z-index: 1;
+    transform: translateX(0%);
+}
+.slide_ani_1{
+    transform: translateX(100%);
+
+    animation: slide_ani_1 0.3s none;
+}
+@keyframes slide_ani_1{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+.slider .visual_1{
+    background-color: #4ac;
+}
+.slider .visual_2{
+    background-color: gray;
+    /* display: none; */
+}
+.slider .visual_3{
+    background-color: linen;
+
+}
+
+.visual .bullet{
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 2;
+}
+.visual .bullet ul{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+}
+.bullet ul li{
+    padding: 5px;
+}
+
+
+
+/* =============== assignment div =============== */
+
+
+.assignment{
+    position: relative;
+    width: 100%;
+    height: 300px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.assignment h1{
+    display: inline-block;
+}
+
+
+/* =============== progress div =============== */
+
+.progress{
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.progress h1{
+    font-family: "NSEB";
+    font-size: 38px;
+    padding:5px;
+    border-bottom: 1.5px solid black;
+}
+.progress .progress_content{
+    width: 1200px;
+    /* width: 100%; */
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.progress_content .progress_block{
+    position: relative;
+    padding: 40px 20px;
+    width: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 5px 3px 28px rgba(0,0,0,0.25), 5px 5px 10px rgba(0,0,0,0.22);
+    transition: all 0.4s;
+}
+.progress_content .progress_block:hover{
+    transform: translateY(-8%);
+    box-shadow: 5px 3px 38px rgba(0,0,0,0.35), 5px 5px 15px rgba(0,0,0,0.32);
+
+}
+
+.progress_block h2{
+    font-family: "NSEB";
+    font-size: 26px;
+    padding: 20px 10px;
+}
+
+.progress_block h3{
+    font-family: "NSREB";
+    font-size: 42px;
+    position: absolute;
+    top: 235px;
+    transform: translateY(-50%);
+}
+
+
+.progress_svg{
+    transform: rotate(-90deg);
+}
+.progress_svg .circle{
+
+    /* 
+        
+        stroke-dasharray = r * 2 * PI
+        per = ((100-per)/100)*stroke-dasharray
+        stroke-dashoffset = per
+    
+    */
+    /* stroke-dashoffset: 565.48; */
+
+    stroke-dashoffset: 691.15;
+    stroke-dasharray:691.15;
+    fill:transparent;
+    /* transition: stroke-dashoffset 1s linear; */
+    stroke: #ddd;
+    stroke-width: 1em;
+    /* animation: test 1.3s ease-in-out forwards; */
+    /* animation: progress_base 0.8s ease-in-out forwards; */
+}
+.progress_svg .circle1{
+    stroke-dashoffset: 0;
+    z-index: 50;
+}
+.progress_svg .circle2{
+    stroke: #9a9a9a;
+    z-index: 51;
+}
+.ani_circle_1{
+    animation: progress_base 0.6s 0.4s ease-in-out both;
+}
+.progress_svg .circle3{
+    z-index: 52;
+}
+.ani_circle_2{
+    animation: progress_base 0.7s 0.5s ease-in-out both;
+}
+
+.progress_1 .progress_svg .circle2{
+    stroke-dashoffset: 504.54;
+}
+.progress_1 .progress_svg .circle3{
+    stroke: #fc6;
+    stroke-dashoffset: 525.274;
+}
+.progress_2 .progress_svg .circle2{
+    stroke-dashoffset: 380;
+}
+.progress_2 .progress_svg .circle3{
+    stroke: #cf6;
+    stroke-dashoffset: 394;
+}
+.progress_3 .progress_svg .circle2{
+    stroke-dashoffset: 131.3;
+}
+.progress_3 .progress_svg .circle3{
+    stroke: #6cf;
+    stroke-dashoffset: 152;
+}
+
+
+/* =============== calender div =============== */
+
+.calender{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    height: 460px;
+    margin-bottom: 130px;
+    /* padding-top: 30px; */
+}
+.calender .calender_content{
+    transform: translateY(100px);
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ani_calender_1{
+    animation: calender_show 0.75s ease-in-out both;
+}
+.ani_calender_2{
+    animation: calender_show 0.65s 0.2s ease-in-out both;
+}
+.ani_calender_3{
+    animation: calender_show 0.65s 0.4s ease-in-out both;
+}
+.calender_img{
+    /* box-shadow: 5px 3px 28px rgba(0,0,0,0.25), 5px 5px 10px rgba(0,0,0,0.22); */
+    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.19);
+}
+.current_calender h1{
+    font-family: "NSB";
+    font-size: 27px;
+    margin-top: 8px;
+}
+
+.current_calender img{
+    width: 430px;
+}
+.current_calender img:hover{
+    animation: calender_bounce .8s infinite ease-in-out;
+}
+
+.calender_text{
+    padding: 15px 35px;
+}
+.calender_text h1{
+    padding: 10px 0px;
+    font-family: "NSEB";
+    font-size: 44px;
+}
+.calender_text h2{
+    font-family: "NSB";
+    font-size: 20px;
+}
+.sub_calender_imgset{
+    display: flex;
+    flex-direction: row;
+    /* width: 500px; */
+}
+.sub_calender_img{
+    margin: 25px 35px;
+    margin-top: 45px;
+}
+.sub_calender_img img{
+    width: 250px;
+}
+.sub_calender_img img:hover{
+    animation: calender_bounce .8s infinite ease-in-out;
+}
+.sub_calender_img h1{
+    font-family: "NSB";
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+
+/* ================= multimedia ================= */
+
+.multimedia{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+    font-family: "NSEB";
+}
+.multimedia .galary{
+    padding: 50px;
+    text-align: left;
+}
+.multimedia .galary .galary_content{
+    width: 500px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid black;
+}
+
+
+.multimedia .youtube{
+    padding: 50px;
+    text-align: left;
+}
+.multimedia .youtube .youtube_content{
+    width: 500px;
+    height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid black;
+}
+
+/* ================= notification ================= */
+
+
+.notification{
+    width: 100%;
+    background-color: gray;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.notification div{
+    width: 50%;
+    display: flex;
+    height: 300px;
+    font-family: "NSREB";
+    position: relative;
+}
+.smash{
+    background-color: #4ad;
+    color: white;
+}
+.notice{
+    background-color: #fc6;
+}
+.notification div h1{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+/* ================= animation ================= */
+
+@keyframes calender_bounce{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(-4%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes progress_base{
+    from{
+        stroke-dashoffset: 691.15;
+    }
+}
+@keyframes calender_show{
+    0%{
+        opacity: 0;
+        transform: translateY(-12%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
